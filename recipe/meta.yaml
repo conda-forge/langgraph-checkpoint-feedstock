@@ -1,5 +1,5 @@
 {% set name = "langgraph-checkpoint" %}
-{% set version = "2.0.6" %}
+{% set version = "2.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langgraph_checkpoint-{{ version }}.tar.gz
-  sha256: 69ab9c61c4e2992264671f55579c24070b7b6cedc105a33da3fba6526df248cf
+  sha256: 88d648a331d20aa8ce65280de34a34a9190380b004f6afcc5f9894fe3abeed08
 
 build:
   noarch: python
