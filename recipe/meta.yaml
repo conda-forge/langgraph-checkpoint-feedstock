@@ -1,5 +1,5 @@
 {% set name = "langgraph-checkpoint" %}
-{% set version = "2.0.9" %}
+{% set version = "2.0.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langgraph_checkpoint-{{ version }}.tar.gz
-  sha256: 43847d7e385a2d9d2b684155920998e44ed42d2d1780719e4f6111fe3d6db84c
+  sha256: 2dcc04e09091d588bb6209e49d83ff5406d7231c2590d6ff18fb29ab8b140129
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.0
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
     - msgpack-python >=1.1.0,<2.0.0
-    - python >=3.9.0,<4.0.0,<4.0
+    - python >={{ python_min }}
     - langchain-core >=0.2.38,<0.4
 
 test:
@@ -31,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://www.github.com/langchain-ai/langgraph
