@@ -1,5 +1,5 @@
 {% set name = "langgraph-checkpoint" %}
-{% set version = "2.0.26" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langgraph_checkpoint-{{ version }}.tar.gz
-  sha256: 2b800195532d5efb079db9754f037281225ae175f7a395523f4bf41223cbc9d6
+  sha256: cdaa2f0b49aa130ab185c02d82f02b40299a1fbc9ac59ac20cecce09642a1abe
 
 build:
   noarch: python
@@ -20,10 +20,10 @@ requirements:
     - poetry-core
     - pip
   run:
-    - ormsgpack >=1.8.0,<2.0.0
+    - ormsgpack >=1.10.0
     - msgpack-python >=1.1.0,<2.0.0
     - python >={{ python_min }}
-    - langchain-core >=0.2.38,<0.4
+    - langchain-core >=0.2.38
 
 test:
   imports:
