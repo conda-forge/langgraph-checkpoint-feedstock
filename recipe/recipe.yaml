@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: langgraph-checkpoint
-  version: "4.1.0"
+  version: "4.1.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/langgraph_checkpoint-${{ version }}.tar.gz
-  sha256: e5bb304e30fc1363ac8fcb5f7dee5ca2185d77fe475b0d01de2c5f91324c2c21
+  sha256: 6c2bdb530c91f91d7d9c1bd100925d0fc4f498d418c17f3587d1526279482a25
 
 build:
   number: 0
